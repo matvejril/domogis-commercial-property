@@ -2,14 +2,10 @@
     background-color: #f4fcff;
     padding-top: 60px;
     padding-bottom: 75px;
-    h5 {
-        margin: 0 0 20px 0;
-        font-size: 20px;
-    }
     &__title {
         margin: 0 0 45px 0;
         text-align: center;
-        font-family: OpenSansSemibold, sans-serif;
+        font-family: "OpenSansItalic", sans-serif;
         font-size: 25px;
         &:after {
             content: "";
@@ -19,32 +15,65 @@
             border-top: 1px solid #cad5d5;
         }
     }
+    h4 {
+        margin: 0 0 20px 0;
+        font-size: 20px;
+    }
     &__content {
-        width: 85%;
+        width: 100%;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         flex-wrap: nowrap;
-        align-items: center;
     }
     &__allowed {
         width: 75%;
-        padding: 28px 10px 28px 34px;
+        padding: 28px 34px 28px 34px;
         margin: 0;
         background-color: #ebfff4;
         box-sizing: border-box;
-        max-height: 312px;
+    }
+    &__allowed-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        div {
+            width: 50%;
+            min-width: 303px;
+            margin: 0 auto;
+
+        }
     }
     &__forbidden {
         width: 25%;
-        padding: 28px 0 28px 10px;
+        min-width: 295px;
+        padding: 28px 34px 28px 34px;
         margin: 0;
         background-color: #ffefea;
         box-sizing: border-box;
-        height: 312px;
-        max-height: 312px;
+        li {
+            padding: 12px 0 12px 60px;
+            &:first-child {
+                margin-bottom: 12px;
+            }
+        }
+    }
+    &__allowed-subtitle {
+        display: inline-block;
+        font-weight: normal;
+        text-decoration: underline;
+        font-size: 17px;
+        margin: 0 0 5px 0;
     }
     &__allowed-list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding: 0;
+        margin: 0 auto;
+    }
+    &__forbidden-list {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -55,22 +84,18 @@
 }
 
 .estate-object {
-    padding: 2px 0 18px 55px;
-    width: 50%;
-    min-width: 140px;
-    flex-wrap: wrap;
+    padding: 10px 0 10px 50px;
+    margin-bottom: 2px;
+    width: 100%;
+    min-width: 303px;
     font-size: 16px;
-    box-sizing: border-box;
-    white-space: normal;
-    &_allowed {
-        background: url(../images/quick-questions/allowed.jpg) no-repeat left top;
-    }
+    background: url(../images/quick-questions/allowed.jpg) no-repeat left center;
+
     &_forbidden {
+        min-width: 0;
         background: url(../images/quick-questions/forbidden.jpg) no-repeat left top;
-        padding: 0 10px 0 50px;
-        margin: 0;
-        white-space: normal;
-        width: auto;
+        padding-left: 60px;
+        margin: 0 auto 0 auto;
     }
 }
 
@@ -93,26 +118,18 @@
         &__allowed {
             width: 100%;
             padding: 10px;
-            max-height: none;
+            div {
+                margin: 0 auto;
+            }
         }
         &__forbidden{
             width: 100%;
             padding: 10px;
-            max-height: 200px;
         }
         &__forbidden-list {
             justify-content: center;
             li {
                 margin-bottom: 10px;
-            }
-        }
-    }
-    .estate-object {
-
-        &_forbidden {
-            p {
-                margin: 0 auto;
-                width: 60%;
             }
         }
     }

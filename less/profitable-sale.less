@@ -59,26 +59,44 @@
     }
     &__btn {
         white-space: normal;
-        display: inline-block;
+        display: block;
         width: 165px;
+        height: auto;
         text-align: center;
         border-radius: 7px;
         font-family: "Open Sans", sans-serif;
         font-size: 16px;
-        //float: right;
-        padding: 10px 10px 10px 10px;
+        padding: 5px 10px 5px 10px;
         background-color: #009746;
         color: #ffffff;
+        line-height: 1.2;
     }
 }
 
+
+@media screen and (max-width: 768px) {
+    .profitable-sale {
+        &__title {
+            font-size: 25px;
+        }
+    }
+    .order-photo {
+        &__selling-text {
+            width: 100%;
+            display: block;
+        }
+        &__btn {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
 
 @media screen and (max-width: 380px) {
     .profitable-sale {
         padding-bottom: 20px;
         &__title {
             margin-bottom: 30px;
-            font-size: 25px;
         }
     }
 }

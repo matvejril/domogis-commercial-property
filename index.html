@@ -11,9 +11,10 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
     <link href="css/index.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
 </head>
 
 <body class="wrap">
@@ -242,25 +243,26 @@
     </div>
 </header>
 
-<div class="contact-us">
+<div class="landing-nav">
     <div class="container">
-        <ul class="contact-us__list">
-            <li class="contact-us__item contact-us_active">
+        <a class="landing-nav__trigger" href="#"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
+        <ul class="landing-nav__list">
+            <li class="landing-nav__item landing-nav__item_active">
                 <a href="/o-servise/prodat-personalnuyu-nedvizhimost">Продать<br>персональную<br>недвижимость</a>
             </li>
-            <li class="contact-us__item">
+            <li class="landing-nav__item">
                 <a href="/o-servise/prodat-kommercheskuyu-nedvizhimost">Продать<br>коммерческую<br>недвижимость</a>
             </li>
-            <li class="contact-us__item">
+            <li class="landing-nav__item">
                 <a href="/o-servise/">Для девелоперов<br>коттеджных<br>поселков</a>
             </li>
-            <li class="contact-us__item">
+            <li class="landing-nav__item">
                 <a href="/o-servise/kontakt">Как пользоваться<br>картой<br>инструменты сервиса</a>
             </li>
-            <li class="contact-us__item">
+            <li class="landing-nav__item">
                 <a href="/o-servise/ot-avtora">От автора<br>сервиса</a>
             </li>
-            <li class="contact-us__item">
+            <li class="landing-nav__item">
                 <a href="/o-servise/kontakt">Контакты</a>
             </li>
         </ul>
@@ -275,7 +277,6 @@
 </div>
 
 <div class="sections">
-
     <div class="our-advantages">
         <div class="container">
             <h2 class="our-advantages__title">Продажа недвижимости через сервис DomoGis.ru - это прдажа без каких-либо
@@ -311,11 +312,12 @@
                     </ul>
                 </div>
             </div>
-            <div class="our-advantages__quote">
-                <p class="our-advantages__quote-open"></p>
-                <p class="our-advantages__quote-text">Местоположение - один из важнейших факторов при принятии решения
-                    о покупке коммерческой недвижимости. На сервисе DomoGis.ru</p>
-                <p class="our-advantages__quote-close"></p>
+            <div class="quote">
+                <p class="quote__open"></p>
+                <p class="quote__text">Местоположение - один из важнейших факторов при принятии решения
+                    о покупке коммерческой недвижимости. На сервисе DomoGis.ru можно показать точные границы объекта и привязку
+                    на карте</p>
+                <p class="quote__close"></p>
             </div>
         </div>
     </div>
@@ -346,22 +348,29 @@
             <h3 class="estate-objects__title">Какие объекты можно разместить в разделе персональная недвижимость на сайте DomoGis.ru?</h3>
             <div class="estate-objects__content">
                 <div class="estate-objects__allowed">
-                    <h5>Можно</h5>
-                    <ul class="estate-objects__allowed-list">
-                        <li class="estate-object estate-object_allowed">Земля</li>
-                        <li class="estate-object estate-object_allowed">Производства</li>
-                        <li class="estate-object estate-object_allowed">Инвестиционные<br> проекты</li>
-                        <li class="estate-object estate-object_allowed">Универсальные помещения</li>
-                        <li class="estate-object estate-object_allowed">Склады и складские площадки</li>
-                        <li class="estate-object estate-object_allowed">Автосервисы, мотели, торговые здания</li>
-                        <li class="estate-object estate-object_allowed">Прочие  объекты, за которыми закреплен<br>
-                            земельный участок</li>
-                    </ul>
+                    <h4>Можно</h4>
+                    <div class="estate-objects__allowed-container">
+                        <div>
+                            <ul class="estate-objects__allowed-list">
+                                <li class="estate-object">Земля</li>
+                                <li class="estate-object">Производства</li>
+                                <li class="estate-object">Инвестиционные проекты</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="estate-objects__allowed-list">
+                                <li class="estate-object">Универсальные помещения</li>
+                                <li class="estate-object">Склады и складские площадки</li>
+                                <li class="estate-object">Автосервисы, мотели, торговые здания</li>
+                                <li class="estate-object">Прочие  объекты, за которыми закреплен земельный участок</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="estate-objects__forbidden">
-                    <h5>Нельзя</h5>
+                    <h4>Нельзя</h4>
                     <p class="estate-object estate-object_forbidden">Объекты за которыми не закреплен земельный
-                        учасок, т.е. отдельные офисы, помещения в здании и т.д.</p>
+                    учасок, т.е. отдельные офисы, помещения в здании и т.д.</p>
                 </div>
             </div>
         </div>
@@ -430,7 +439,7 @@
                     Вы можете заказать услугу фотосъёмки. Сделаем качественные фото за умеренную плату - от 1500 руб.
                     Примеры выполенной работы <a href="#">смотрите здесь.</a>
                 </p>
-                <a class="order-photo__btn" href="#">Заказать обрытный звонок</a>
+                <a class="button_green order-photo__btn" href="#">Заказать обрытный звонок</a>
             </div>
         </div>
     </div>
@@ -510,5 +519,17 @@
         </div>
     </div>
 </footer>
+
+<script>
+    $('.landing-nav__trigger').click(function() {
+        $('.landing-nav__list').slideToggle(500);
+    });
+
+    $(window).resize(function() {
+        if ($(window).width() > 1160) {
+            $('.landing-nav__list').removeAttr('style');
+        }
+    });
+</script>
 </body>
 </html>
